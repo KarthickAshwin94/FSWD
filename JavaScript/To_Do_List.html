@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="container_main">
+        <input type="text" placeholder="Enter your to do list " id="task">
+        <button id="add">Add</button>
+        <ul id="list1">
+            <li>Learn Web Development <button id="delete" onclick="finish(event)">Delete</button></li>
+        </ul>
+    </div>
+
+    <script>
+        var task=document.getElementById("task");
+        var add=document.getElementById("add");
+        var del=document.getElementById("delete");
+        var list1=document.getElementById("list1");
+        //now we have got the status of each field and buttons
+        add.addEventListener("click",function(){
+           //when we click the add button we need to add it in the ul 
+           // so create an li element
+           var li=document.createElement("li");
+           li.innerHTML=task.value+'<button onclick="finish(event)" >delete</button>'
+           list1.append(li);
+        })
+        function finish(event)
+        {
+            event.target.parentElement.remove();
+        }
+    </script>
+</body>
+</html>

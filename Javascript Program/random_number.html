@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing a random number</title>
+</head>
+<body>
+    <div class="container_main">
+        <h1>Guess the number from 1 to 5</h1>
+        <table>
+            <tr>
+                <td><input type="number" placeholder="Enter the number from 1 to 5" id="one"></td>
+                <td><input type="submit" id="two" onclick="check()"></td>
+            </tr>
+        </table>
+        <p id="three"></p>
+        <p id="four"></p>
+    </div>
+    <script>
+        var count=3;
+        var b=Math.floor(Math.random()*10*0.5)+1;
+            function check()
+        {
+           var a=document.getElementById("one").value;
+          
+           console.log(b);
+           if(a==b)
+           {
+            document.getElementById("three").textContent="You Guessed the correct number";
+            alert("You got it right!");
+            console.log(a==b);
+           } 
+           else 
+           {
+            document.getElementById("three").textContent="You Guessed the wrong number";
+           }
+           count--;
+           document.getElementById("four").textContent="Available guesses "+count;
+           
+        }
+        
+        
+    </script>
+</body>
+</html>

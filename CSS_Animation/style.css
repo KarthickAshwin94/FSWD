@@ -1,0 +1,18 @@
+.container_main{
+    height:400px;
+    width:300px;
+    background-color: red;
+    border:2px solid black;
+    margin:500px;
+    transition:4s;
+    margin:0px;
+}
+.container_main h1{
+   margin-left:100px;
+   margin-top:200px;
+}
+.container_main:hover{
+    cursor: pointer;
+    transform:rotateY(180deg);
+    transition: 4s;
+}

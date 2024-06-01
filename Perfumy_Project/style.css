@@ -1,0 +1,78 @@
+.navbar{
+    background-color: black;
+    color:white;
+    height:100px;
+    margin:0%;
+}
+.navbar h1{
+    margin:0%;
+    display: inline-block;
+    margin:20px;
+}
+.navbar h2{
+    display: inline-block;
+    margin-left: 60%;
+    color:gray;
+    cursor: pointer;
+}
+
+.searchbar input{
+    height: 50px;
+    margin:100px;
+    width:1000px;
+    margin-left:15%;
+}
+.searchbar input:active{
+    border:2px solid blue;
+}
+
+.products_one{
+    display: inline-block;
+    height:300px;
+    width:250px;
+    border:2px solid black;
+    margin-left:20%;
+    text-align: center;
+}
+.products_one img{
+    height:200px;
+    width:250px;
+}
+.products_two{
+    display: inline-block;
+    height:300px;
+    width:250px;
+    border:2px solid black;
+    text-align: center;
+}
+.products_two img{
+    height:200px;
+    width:250px;
+}
+
+.products_three{
+    display: inline-block;
+    height:300px;
+    width:250px;
+    border:2px solid black;
+    text-align: center;
+}
+.products_three img{
+    height:200px;
+    width:250px;
+}
+.contactpage{
+    background-color: black;
+    color: white;
+}
+
+.aboutus h1,p{
+    text-align: center;
+}
+
+.contactpage h1,p{
+    text-align: center;
+}
+.contactpage p{
+    margin-top:20px;
+}

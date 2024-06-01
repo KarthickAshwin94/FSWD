@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="container_main">
+        <input type="checkbox" name="program" value="C">C
+        <input type="checkbox" name="program" value="C++">C++
+        <input type="checkbox" name="program" value="Java">Java
+    </div>
+    <h1 id="res"></h1>
+
+    <script>
+        var program=document.getElementsByName("program");
+        var res=document.getElementById("res");
+         skill=[];
+        for( i=0;i<program.length;i++)
+        {
+            program[i].addEventListener('click',function(){
+                if(event.target.checked)
+                {
+                    skill.push(event.target.value);
+                    res.innerHTML=skill;
+                }
+                else {
+                    //find index of corresponding element
+                    var index=skill.indexOf(event.target.value);
+                    skill.splice(index,1);
+                    res.innerHTML=skill;
+                }
+            })
+        }
+    </script>
+</body>
+</html>

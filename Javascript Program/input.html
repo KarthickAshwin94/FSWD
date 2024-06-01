@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Session on DOM</title>
+</head>
+<body>
+    <div class="container_main">
+        <table>
+            <tr>
+                <td><input type="text" placeholder="Enter some text" id="one" onkeyup="reflect()"></td>
+            </tr>
+        </table>
+        <h1 id="two"></h1>
+    </div>
+    <script>
+        function reflect()
+        {
+        var a1=document.getElementById("one").value;
+        document.getElementById("two").textContent=a1;
+        }
+       
+    </script>
+</body>
+</html>

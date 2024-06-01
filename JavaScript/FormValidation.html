@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation in html </title>
+    <style>
+        .nameError,.emailError,.phoneError{
+            color:red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container_main">
+        <form action="">
+            <table>
+                <tr>
+                    <td>
+                        <label for="name">Name</label>
+                        <input type="text" placeholder="Enter your name" id="name" >
+                        <span class="nameError">Name must contain only letters</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Enter your email" id="email" >
+                        <span class="emailError">please provide valid gmail address</span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td>
+                            <label for="phone">Phone Number</label>
+                            <input type="text" placeholder="Enter your phone number" id="phone" >
+                            <span class="phoneError">Phone number must containe only 10 digits</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           
+                            <input type="submit" id="submit">
+                        </td>
+                    </tr>
+            </table>
+        </form>
+        
+        <script>
+            var submit=document.getElementById("submit");
+            submit.addEventListener("click",function(){
+                event.preventDefault();
+            var name=document.getElementById("name");
+            var email=document.getElementById("email");
+            var phone=document.getElementById("phone");
+            //first enter regex expressions for name,email and phonenumber
+            var nameRegex=/^[a-zA-Z]+$/
+            var emailRegex=/^[a-zA-Z0-9]+@gmail\.com$/;
+            var phoneRegex=/^\d{10}$/;
+            var validate=true;
+            if(nameRegex.test(name.value)==false)
+            {
+                document.querySelector(".nameError").style.display="inline";
+                validate=false;
+            }
+            else 
+            {
+                document.querySelector(".nameError").style.display="none";  
+            }
+            if(emailRegex.test(email.value)==false)
+            {
+                document.querySelector(".emailError").style.display="inline";
+                validate=false;
+            }
+            else 
+            {
+                document.querySelector(".emailError").style.display="none";
+                
+            }
+            if(phoneRegex.test(phone.value)==false)
+            {
+                document.querySelector(".phoneError").style.display="inline";
+                validate=false;
+            }
+            else 
+            {
+                document.querySelector(".phoneError").style.display="none";
+            }
+            if((validate == true))
+            {
+                alert("form submitted successfully");
+            }
+
+            })
+            // read the name,email, and phone number
+           
+
+        </script>
+    </div>
+</body>
+</html>
+
+
+
+
+           
+           
+          

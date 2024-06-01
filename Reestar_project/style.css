@@ -1,0 +1,134 @@
+.header{
+  background-color: black;
+  color:white;
+  text-align: center;
+}
+.food_items{
+  margin-left:200px;
+}
+.food1{
+  display: inline-block;
+  height:450px;
+  width:250px;
+  border:2px solid black;
+}
+.food1__image{
+  height:300px;
+  width:250px;
+}
+.food1__name,.food1__desc{
+  text-align: center;
+}
+.food1__order{
+  margin-left:80px;
+  background-color: black;
+  color:white;
+  padding:10px;
+  cursor: pointer;
+}
+
+.food2{
+  display:inline-block;
+  border:2px solid black;
+  height:450px;
+  width:250px;
+
+}
+.food2__image{
+  height:300px;
+  width:250px;
+}
+.food2__name,.food2__desc{
+  text-align: center;
+}
+
+.food2__order{
+  border:2px solid black;
+  background-color: black;
+  color:white;
+  padding:10px;
+  margin-left:70px;
+  cursor: pointer;
+}
+
+.food3{
+  display:inline-block;
+  height:450px;
+  width:250px;
+  border:2px solid black;
+}
+.food3__image{
+  height:300px;
+  width:250px;
+}
+
+.food3__name,.food3__desc{
+  text-align: center;
+}
+
+.food3__order{
+  border:2px solid black;
+  padding:10px;
+  background-color: black;
+  color:white;
+  margin-left:70px;
+  cursor:pointer;
+}
+
+
+
+.food4{
+  display:inline-block;
+  height:450px;
+  width:250px;
+  border:2px solid black;
+}
+.food4__image{
+  height:300px;
+  width:250px;
+}
+
+.food4__name,.food4__desc{
+  text-align: center;
+}
+
+.food4__order{
+  border:2px solid black;
+  padding:10px;
+  background-color: black;
+  color:white;
+  margin-left:70px;
+  cursor:pointer;
+}
+
+.footer{
+  background-color: black;
+  color:white;
+  text-align: center;
+ 
+  
+}
+
+
+
+.footer__name,.footer__age,.footer__email{
+  margin-left: 600px;
+  
+}
+.footer__input1,.footer__input2,.footer__input3{
+  padding:10px;
+  border:2px solid black;
+}
+.footer__submit{
+  background-color: yellow;
+  color:black;
+  cursor:pointer;
+  margin-left: 650px;
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:10px;
+  padding-bottom:10px;
+ 
+}
+
+

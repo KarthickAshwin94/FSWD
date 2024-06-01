@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding 2 numbers using DOM</title>
+</head>
+<body>
+    <div class="container_main">
+        <table>
+            <tr>
+                <td>Enter the number 1</td>
+                <td>
+                    <input type="number" placeholder="Enter the number 1" id="num1">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter the number 2</td>
+                <td>
+                    <input type="number" placeholder="Enter the number 2" id="num2">
+                </td>
+            </tr>
+           
+            <tr>
+                <td>
+                    <input type="submit" id="submit" onclick="add()">
+                </td>
+               
+            </tr>
+        </table>
+        <h1 id="result">The result is </h1>
+    </div>
+    <script>
+        var a1=document.getElementById("num1");
+        var a2=document.getElementById("num2");
+        function add()
+        {
+            var a3=Number(a1.value)+Number(a2.value);
+            console.log(a3);
+            document.getElementById("result").textContent="The result is "+a3;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .warning{
+            color:red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container_main">
+        <form action="">
+            <table>
+                <tr>
+                    <td>
+                        <label for="name">Name:</label>
+                        <input type="text" placeholder="Enter your name" id="name">
+                        <span class="warning">Name must only contain letters</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email:</label>
+                        <input type="email" placeholder="Enter your email" id="email">
+                        <span class="warning">Email must contain @gmail.com</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phone">Phone:</label>
+                        <input type="text" placeholder="Enter your phone number" id="phone">
+                        <span class="warning">The phone number must have 10 digits</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" id="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+       
+       <script>
+        var submit1=document.getElementById("submit");
+        submit1.addEventListener("click",function(){
+            event.preventDefault();
+            var name=document.getElementById("name");
+            var email=document.getElementById("email");
+            var phone=document.getElementById("phone");
+            var warning1=document.querySelector(".warning");
+            // define regex for name,email and phone numbers;
+            var nameRegex=/^[a-zA-Z]+$/;
+            var emailRegex=/^[a-zA-Z0-9]+@gmail\.com$/;
+            var phoneRegex=/^\d{10}$/;
+            var val1=true;
+            if(nameRegex.test(name.value)==false)
+            {
+                warning1.style.display="inline";
+                val1=false;
+            }
+            else {
+                warning1.style.display="none";
+            }
+            if(emailRegex.test(email.value)==false)
+            {
+                warning1.style.display="inline";
+                val1=false;
+            }
+            else {
+                warning1.style.display="none";
+            }
+            if(phoneRegex.test(phone.value)==false)
+            {
+                warning1.style.display="inline";
+                val1=false;
+            }
+            else{
+                warning1.style.display="none";
+            }
+            if(val1==true)
+            {
+                alert("Form submitted successfully");
+            }
+        })
+       </script>
+       
+    </div>
+
+
+    <script>
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="container_main">
+        <input type="text" placeholder="Enter your to do list" id="input1">
+        <button id="btn1">Add</button>
+        <ul class="list_new">
+            <li>Going to Gym <button id="btn2" onClick="finish(event)">delete</button></li>
+        </ul>
+    </div>
+    
+
+    <script>
+        //read all the tag values
+        var input1=document.getElementById("input1");
+        var btn1=document.getElementById("btn1");
+        var btn2=document.getElementById("btn2");
+        var list_new=document.querySelector(".list_new");
+        btn1.addEventListener("click",function(){
+           //now we need to use input1.value and we need to append it in a li tag
+          var li= document.createElement("li");
+          li.innerHTML=input1.value+'<button onClick="finish(event)" >delete</button>'
+          list_new.append(li);
+        })
+        function finish(event)
+        {
+            console.log(event.target.parentElement);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Card</title>
+    <style>
+        .one{
+            background-color: black;
+            color:white;
+            display:inline-block;
+            height:500px;
+            width:300px;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <img src="Nature.jpeg" alt="Sorry the text can't be displayed" style="height: 200px;width: 200px;">
+        <h2>Ooty: Queen of Hills</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nobis corrupti necessitatibus est architecto saepe obcaecati quibusdam error voluptatibus perspiciatis, consequatur eius expedita enim nesciunt! At unde ex dolorum quidem.</p>
+        <button>Checkout</button>
+    </div>
+</body>
+</html> 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Card</title>
+    <style>
+        .card{
+            width:200px;
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+        .card__button{
+            background-color: greenyellow;/*considers parent colour*/
+            color:black;
+            border:none;
+            padding:3px;
+
+        }
+        .card__button--red{
+            background-color: red;
+        }
+        /* .card__button:hover{
+            background-color: greenyellow;
+            color:black;
+            cursor:pointer;
+ 
+        } */
+    </style>
+
+</head>
+<body>
+    <div class="card">
+        <img src="https://picsum.photos/200" alt="" class="card__image">
+        <h1 class="card__title">Ooty: Queen of hills</h1>
+        <p class="card_desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum aliquid repellendus ipsum beatae ullam laborum corporis dolor nostrum minima provident, eaque iusto saepe pariatur molestiae ipsam natus illum velit excepturi!</p>
+        <button class="card__button">Checkout</button>
+        <button class="card__button card__button--red ">delete</button>
+    </div>
+</body>
+</html>
+
+<!--remember that eventhough we can change the width of the element which has display property as block, still it takes the entire width of the page-->

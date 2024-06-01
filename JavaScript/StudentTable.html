@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration process</title>
+    <style>
+      #btn1{
+        background-color:aqua;
+        width:100%;
+        padding:2px;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+    <div class="container_main">
+        <h1>Student Form</h1>
+        <table border="1" >
+            <tr>
+                <td><b>Name</b></td>
+                <td><input type="text" placeholder="Enter your name " id="name"></td>
+            </tr>
+            <tr>
+                <td><b>Age</b></td>
+                <td><input type="number" id="age"></td>
+            </tr>
+            <tr>
+                <td><b>Gender</b></td>
+                <td>
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Course</b></td>
+                <td>
+                    <select name="" id="course">
+                        <option value="Java" id="java">Java</option>
+                        <option value="Python" is="python">Python</option>
+                        <option value="C" id="c">C</option>
+                        <option value="javascript" id="javascript">JavaScript</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Email</b></td>
+                <td><input type="email" id="email"></td>
+            </tr>
+           <tr>
+            <td colspan="2">
+                <button id="btn1">Save</button>
+            </td>
+           </tr>
+        </table>
+        <div  id="tableContainer"></div>
+    </div>
+    
+    <script>
+       // read all the input and button values 
+      
+       var age=document.getElementById("age");
+       var male=document.getElementById("male");
+       var female=document.getElementById("female");
+       var course=document.getElementById("course");
+       var email=document.getElementById("email");
+       var btn1=document.getElementById("btn1");
+       var gender;
+       var table;
+       btn1.addEventListener("click",function(){
+        var name=document.getElementById("name");
+       
+        var selectedGender = male.checked ? "Male" : (female.checked ? "Female" : "");
+        if (!table) {
+                table = document.createElement("table");
+                table.border = "1"; // Optional: set border for better visibility
+
+                var header = table.createTHead();
+                var headerRow = header.insertRow(0);
+                var headers = ['Name', 'Age', 'Gender', 'Course', 'Email','Action'];
+
+                headers.forEach(function(headerText, index) {
+                    var cell = headerRow.insertCell(index);
+                    cell.innerHTML = headerText;
+                });
+
+                var tbody = document.createElement('tbody');
+                table.appendChild(tbody);
+                document.getElementById("tableContainer").appendChild(table);
+            }
+
+            var tbody = table.getElementsByTagName('tbody')[0];
+            var newRow = tbody.insertRow();
+            var data = [name.value, age.value, selectedGender, course.value, email.value];
+
+            data.forEach(function(value, index) {
+                var cell = newRow.insertCell(index);
+                cell.innerHTML = value;
+            });
+            // Add the delete button in the last cell
+            var deleteCell = newRow.insertCell(data.length);
+            var deleteButton = document.createElement('button');
+            deleteButton.innerHTML = 'Delete';
+            deleteButton.addEventListener('click', function() {
+                var row = this.parentElement.parentElement;
+                row.parentElement.removeChild(row);
+            });
+            deleteCell.appendChild(deleteButton);
+
+       })
+
+  
+       // course.value is not working 
+       // for male and female radio button we are getting on for both the buttons 
+
+       
+    </script>
+</body>
+</html>
